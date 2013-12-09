@@ -1,0 +1,20 @@
+; .editorconfig
+
+root = true
+
+[**.js]
+indent_style = space
+indent_size = 2
+path=~/.vim/bundle/js-beautify/js/lib/beautify.js
+; Javascript interpreter to be invoked by default 'node'
+bin=node
+
+[**.css]
+indent_style = space
+indent_size = 2
+
+[**.html]
+indent_style = space
+indent_size = 2
+; max_char = 78
+; brace_style = expand

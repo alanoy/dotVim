@@ -24,16 +24,17 @@ Bundle 'othree/html5.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'marijnh/tern_for_vim'
-Bundle 'vim-scripts/vim-jsbeautify'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/PinyinSearch'
+Bundle 'scrooloose/syntastic'
 " vim theme
 Bundle 'jonathanfilip/vim-lucius'
-Bundle 'scrooloose/syntastic'
 
 
 " =====================
@@ -290,7 +291,7 @@ if has('gui_running')
     endif
 
     if has("unix") && !has('gui_macvim')
-        set guifont=YaHei_Consolas_Hybrid\ 11
+        set guifont=PT_Mono:h13
     endif
 
     if has("mac") || has("gui_macvim")
@@ -298,13 +299,8 @@ if has('gui_running')
             " 开启抗锯齿渲染
             set anti
             " MacVim 下的字体配置
-            " set guifont=Courier_New:h14
-            " set guifont=YaHei_Consolas_Hybrid:h13
-            " set guifontwide=YaHei_Consolas_Hybrid:h12
-            " set guifont=Consolas:h13
-            " set guifontwide=Consolas:h14
-            set guifont=Monaco:h12
-            set guifontwide=Monaco:h13
+            set guifont=PT_Mono:h13
+            set guifontwide=PT_Mono:h13
 
             "set transparency=8
             set lines=222 columns=222
@@ -498,14 +494,11 @@ let g:user_emmet_install_global = 0
 autocmd FileType html EmmetInstall
 
 " js beautify
-let g:jsbeautify = {"indent_size": 2, "indent_char": "\t"}
 map <leader>jb :call JsBeautify()<cr>
 
 " syntastic
 if &diff
-    let g:loaded_syntastic_plugin = 1
 else
-    let g:loaded_syntastic_plugin = 1
     let g:syntastic_check_on_open = 0
     let g:syntastic_echo_current_error = 1
     let g:syntastic_enable_signs = 1
