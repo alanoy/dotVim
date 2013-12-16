@@ -130,10 +130,10 @@ set magic     " Set magic on, for regular expressions
 
 noremap <CR> :nohlsearch<CR>
 
-" 制表符(设置所有的tab和缩进为2个空格)
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" 制表符(设置所有的tab和缩进为4个空格)
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab " 使用空格来替换tab
 set smarttab
 " 自动删除行尾空格
@@ -494,7 +494,12 @@ let g:user_emmet_install_global = 0
 autocmd FileType html EmmetInstall
 
 " js beautify
-map <leader>jb :call JsBeautify()<cr>
+" map <leader>jb :call JsBeautify()<cr>
+autocmd FileType javascript map <leader>jb :call JsBeautify()<cr>
+" for html
+autocmd FileType html map <Leader>jb :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css map <Leader>jb :call CSSBeautify()<cr>
 
 " syntastic
 if &diff
@@ -513,7 +518,7 @@ else
     highlight SyntasticErrorSign guifg=white guibg=red
 
     let g:syntastic_javascript_syntax_checker='jshint'
-    let g:syntastic_javascript_jshint_conf='~/jshintrc.json'
+    let g:syntastic_javascript_jshint_conf='~/.jshintrc'
 endif
 
 " vim-javascript
