@@ -33,6 +33,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/PinyinSearch'
 Bundle 'scrooloose/syntastic'
+Bundle 'dyng/ctrlsf.vim.git'
 " vim theme
 Bundle 'jonathanfilip/vim-lucius'
 
@@ -513,7 +514,7 @@ else
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_loc_list_height = 3
     " only display error
-    let g:syntastic_quiet_warnings = 1
+    let g:syntastic_quiet_messages = {'level': 'warnings'}
 
     highlight SyntasticErrorSign guifg=white guibg=red
 
