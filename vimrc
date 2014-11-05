@@ -132,9 +132,9 @@ set magic     " Set magic on, for regular expressions
 noremap <CR> :nohlsearch<CR>
 
 " 制表符(设置所有的tab和缩进为4个空格)
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab " 使用空格来替换tab
 set smarttab
 " 自动删除行尾空格
