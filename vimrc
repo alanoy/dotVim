@@ -47,17 +47,21 @@ if !has('gui_running')
 endif
 
 set clipboard=unnamed
+set linespace=4
 
 " powerline
-set guifont=Monaco\ for\ Powerline
+set guifont=Monoid\ Retina
 let g:Powerline_symbols = 'fancy'
 
 syntax enable
 set background=dark
-colorscheme solarized
-" colorscheme Tomorrow-Night-Eighties
-let g:solarized_termcolors=16
-let g:solarized_termtrans=1
+colorscheme hybrid_material
+
+let g:enable_bold_font=0
+
+" colorscheme solarized
+" let g:solarized_termcolors=16
+" let g:solarized_termtrans=1
 " let g:solarized_italic=1
 " let g:solarized_bold=1
 
@@ -292,7 +296,7 @@ if has('gui_running')
     endif
 
     if has("unix") && !has('gui_macvim')
-        set guifont=PT_Mono:h13
+        set guifont=Monoid\ Retina:h15
     endif
 
     if has("mac") || has("gui_macvim")
@@ -300,8 +304,8 @@ if has('gui_running')
             " 开启抗锯齿渲染
             set anti
             " MacVim 下的字体配置
-            set guifont=PT_Mono:h13
-            set guifontwide=PT_Mono:h13
+            set guifont=Monoid\ Retina:h15
+            set guifontwide=Monoid\ Retina:h15
 
             "set transparency=8
             set lines=222 columns=222
