@@ -1,41 +1,39 @@
-" bundle
-" runtime bundle/vim-pathogen/autoload/pathogen.vim
-" execute pathogen#infect()
-
 " vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/vundle'
 
 " My bundles here:
 " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'lilydjwg/colorizer'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/Auto-Pairs'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'othree/html5.vim'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/PinyinSearch'
-Bundle 'scrooloose/syntastic'
-Bundle 'dyng/ctrlsf.vim.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'lilydjwg/colorizer'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/Auto-Pairs'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'othree/html5.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'dyng/ctrlsf.vim.git'
 " vim theme
-Bundle 'jonathanfilip/vim-lucius'
+Plugin 'jonathanfilip/vim-lucius'
+Plugin 'kristijanhusak/vim-hybrid-material.git'
+
+call vundle#end()
 
 
 " =====================
@@ -619,11 +617,6 @@ let g:ctrlp_working_path_mode = 2
 	" \ 'file': '\.exe$\|\.so$\|\.dll$',
 	" \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 	" \ }
-
-" PinyinSearch
-let g:PinyinSearch_Dict = $HOME.'/.vim/bundle/PinyinSearch/PinyinSearch.dict'
-nnoremap <Leader>ps :call PinyinSearch()<CR>
-nnoremap <Leader>pn :call PinyinNext()<CR>
 
 
 
