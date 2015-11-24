@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'dyng/ctrlsf.vim.git'
+" Plugin 'bling/vim-airline'
 " vim theme
 Plugin 'jonathanfilip/vim-lucius'
 Plugin 'kristijanhusak/vim-hybrid-material.git'
@@ -48,9 +49,35 @@ set clipboard=unnamed
 set linespace=4
 
 " powerline
-set guifont=Monoid\ Retina
 let g:Powerline_symbols = 'fancy'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme = 'molokai'
+" let g:airline_powerline_fonts = 1
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline_inactive_collapse=1
 
+" let g:airline#extensions#branch#empty_message = 'No Branch'
+" let g:airline#extensions#wordcount#enabled = 1
+" let g:airline#extensions#whitespace#enabled = 1
+
+" if !exists('g:airline_symbols')
+  " let g:airline_symbols = {}
+" endif
+
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
+" let g:airline_symbols.whitespace = 'Ξ'
+
+
+set noshowmode
 syntax enable
 set background=dark
 colorscheme hybrid_material
@@ -261,6 +288,11 @@ endif
 " 图形界面
 " =====================
 if has('gui_running')
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h15
+    endif
+
     "set guioptions=mcr " 只显示菜单
     set guioptions=   " 隐藏全部的gui选项
     "set guioptions+=r " 显示gui右边滚动条
