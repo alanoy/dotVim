@@ -1,10 +1,10 @@
 " vundle
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'VundleVim/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " My bundles here:
 " original repos on GitHub
