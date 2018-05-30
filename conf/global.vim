@@ -1,4 +1,5 @@
 colorscheme hybrid_material
+set background=dark
 
 " be 'modern'
 set nocompatible

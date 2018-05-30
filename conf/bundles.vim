@@ -10,7 +10,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lilydjwg/colorizer'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/Auto-Pairs'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'kien/ctrlp.vim'
@@ -28,7 +27,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'dyng/ctrlsf.vim.git'
 " vim theme
-Plugin 'jonathanfilip/vim-lucius'
 Plugin 'kristijanhusak/vim-hybrid-material.git'
 
 call vundle#end()
